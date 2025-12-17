@@ -1,7 +1,138 @@
 ---
-layout: layout.njk
-title: "Mi sitio con Eleventy"
+layout: page.njk
+title: "Inicio"
+subtitle: "Médico internista y nefróloga. Escritora de poesía, teatro y canciones."
+description: "Página oficial de la Dra. María Luisa Erbessd, médica egresada de la UNAM y autora."
 ---
 
-<h1>{{ title }}</h1>
-<p>Hola, este es mi primer sitio con Eleventy desplegado automáticamente desde GitHub.</p>
+<section class="hero">
+  <div class="hero__media">
+    <img src="/assets/img/perfil-ejemplo.svg" alt="Retrato ilustrado de María Luisa Erbessd" />
+  </div>
+  <div class="hero__content">
+    <p class="eyebrow">Médica · Autora</p>
+    <h2>María Luisa Erbessd</h2>
+    <p>
+      Egresada de la UNAM con especialidad en medicina interna y nefrología. Combina la precisión clínica con la creación literaria en poesía, teatro y canciones.
+    </p>
+    <div class="hero__actions">
+      <a class="button primary" href="/biografia/">Conoce su trayectoria</a>
+      <a class="button ghost" href="/obra-literaria/">Explora su obra</a>
+    </div>
+  </div>
+</section>
+
+<section class="highlights">
+  <h3>Explora el sitio</h3>
+  <div class="card-grid">
+    <article class="mini-card">
+      <h4><a href="/biografia/">Biografía</a></h4>
+      <p>Formación en la UNAM, especialidad en medicina interna y nefrología, docencia y vocación por el cuidado integral.</p>
+    </article>
+    <article class="mini-card">
+      <h4><a href="/medicina/">Medicina</a></h4>
+      <p>Investigación clínica, artículos de difusión y un enfoque humanista para pacientes y colegas.</p>
+    </article>
+    <article class="mini-card">
+      <h4><a href="/obra-literaria/">Obra Literaria</a></h4>
+      <p>Poesía íntima, dramaturgia y letras de canciones que dialogan con la experiencia médica y la vida cotidiana.</p>
+    </article>
+  </div>
+</section>
+
+<style>
+  .hero {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    align-items: center;
+    margin-bottom: 2.25rem;
+  }
+
+  .hero__media img {
+    width: 100%;
+    max-width: 380px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 18px;
+    border: 1px solid #e2e8f0;
+    background: linear-gradient(135deg, #f2f6ff, #fff);
+    box-shadow: 0 12px 30px rgba(45, 127, 249, 0.12);
+  }
+
+  .hero__content h2 {
+    margin: 0 0 0.5rem;
+    font-size: clamp(1.9rem, 4vw, 2.4rem);
+  }
+
+  .hero__content p {
+    margin: 0 0 1.25rem;
+    color: #4a5568;
+  }
+
+  .hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    padding: 0.65rem 1rem;
+    border-radius: 12px;
+    font-weight: 700;
+    border: 1px solid #2d7ff9;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+
+  .button.primary {
+    background: #2d7ff9;
+    color: #fff;
+    box-shadow: 0 12px 30px rgba(45, 127, 249, 0.25);
+  }
+
+  .button.primary:hover,
+  .button.primary:focus-visible {
+    filter: brightness(1.05);
+    transform: translateY(-1px);
+  }
+
+  .button.ghost {
+    background: transparent;
+    color: #2d7ff9;
+  }
+
+  .highlights h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+  }
+
+  .mini-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 1rem;
+    height: 100%;
+  }
+
+  .mini-card h4 {
+    margin: 0 0 0.35rem;
+    font-size: 1.05rem;
+  }
+
+  .mini-card p {
+    margin: 0;
+    color: #4a5568;
+  }
+</style>

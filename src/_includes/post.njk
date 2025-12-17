@@ -1,0 +1,41 @@
+---
+layout: layout.njk
+---
+
+<article class="content-card">
+  <header>
+    <p class="eyebrow">{{ category or "Artículo" }}</p>
+    <h1>{{ title }}</h1>
+    <p class="post-meta">
+      {% if date %}
+        <time datetime="{{ date | date('yyyy-MM-dd') }}">{{ date | date("dd 'de' MMMM 'de' yyyy") }}</time>
+      {% endif %}
+      {% if author %} · {{ author }}{% endif %}
+      {% if readingTime %} · {{ readingTime }}{% endif %}
+    </p>
+  </header>
+  <div class="post-body">
+    {{ content | safe }}
+  </div>
+</article>
+
+<style>
+  h1 {
+    margin: 0;
+    font-size: clamp(1.8rem, 3vw, 2.2rem);
+  }
+
+  .post-meta {
+    color: #4a5568;
+    margin: 0.5rem 0 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .post-body > *:first-child {
+    margin-top: 0;
+  }
+
+  .post-body > * + * {
+    margin-top: 1rem;
+  }
+</style>

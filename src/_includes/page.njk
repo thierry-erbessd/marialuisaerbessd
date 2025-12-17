@@ -1,0 +1,36 @@
+---
+layout: layout.njk
+---
+
+<article class="content-card">
+  <header>
+    <h1>{{ title }}</h1>
+    {% if subtitle %}
+      <p class="lead">{{ subtitle }}</p>
+    {% endif %}
+  </header>
+  <div class="page-body">
+    {{ content | safe }}
+  </div>
+</article>
+
+<style>
+  h1 {
+    margin: 0 0 0.35rem;
+    font-size: clamp(1.8rem, 3vw, 2.2rem);
+  }
+
+  .lead {
+    color: #4a5568;
+    margin: 0 0 1.5rem;
+    font-size: 1.05rem;
+  }
+
+  .page-body > *:first-child {
+    margin-top: 0;
+  }
+
+  .page-body > * + * {
+    margin-top: 1rem;
+  }
+</style>
