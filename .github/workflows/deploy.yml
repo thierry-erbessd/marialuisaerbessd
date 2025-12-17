@@ -31,7 +31,7 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           server-dir: ${{ secrets.FTP_REMOTE_DIR }}
-          local-dir: _site
+          local-dir: _site/
           # Opcionales, por si el hosting usa algo distinto:
           protocol: ftp
           port: 21
