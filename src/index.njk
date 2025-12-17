@@ -1,7 +1,70 @@
 ---
-layout: layout.njk
-title: "Mi sitio con Eleventy"
+layout: layouts/base.njk
+title: Inicio
 ---
 
-<h1>{{ title }}</h1>
-<p>Hola, este es mi primer sitio con Eleventy desplegado automáticamente desde GitHub.</p>
+{% include "partials/hero.njk" %}
+
+<section class="section">
+  <div class="container">
+    <h2>Sobre mí</h2>
+    <p class="section-lead">Soy la Dra. María Luisa Erbessd, médica egresada de la UNAM con especialidad en medicina interna y nefrología. Combino la precisión clínica con una mirada humana y creativa que también se refleja en mis textos de poesía, teatro y canciones.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>Práctica médica</h2>
+    <div class="card-grid">
+      <article class="card">
+        <h3>Medicina interna</h3>
+        <p>Atención integral, diagnósticos precisos y seguimiento cercano de condiciones crónicas y agudas.</p>
+        <a class="button ghost" href="/medicina/">Saber más</a>
+      </article>
+      <article class="card">
+        <h3>Nefrología</h3>
+        <p>Evaluación y tratamiento de enfermedades renales, con enfoque preventivo y acompañamiento continuo.</p>
+        <a class="button ghost" href="/nefrologia/">Saber más</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>Obras literarias</h2>
+    <div class="card-grid">
+      <article class="card">
+        <h3>Poesía</h3>
+        <p>Versos que dialogan con la vida hospitalaria, la memoria y la ciudad.</p>
+        <a class="button ghost" href="/obras/poesia/">Leer</a>
+      </article>
+      <article class="card">
+        <h3>Teatro</h3>
+        <p>Pequeñas piezas que exploran la ética médica, el cuidado y los vínculos.</p>
+        <a class="button ghost" href="/obras/teatro/">Ver obras</a>
+      </article>
+      <article class="card">
+        <h3>Canciones</h3>
+        <p>Melodías íntimas y letras que nacen entre guardias y amaneceres.</p>
+        <a class="button ghost" href="/obras/canciones/">Escuchar</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>Últimas novedades</h2>
+    <div class="card-grid">
+      <article class="card">
+        <h3>Conferencia sobre enfermedad renal crónica</h3>
+        <p>Sesión abierta para pacientes y cuidadores sobre prevención, nutrición y acompañamiento emocional.</p>
+      </article>
+      <article class="card">
+        <h3>Poema publicado en revista cultural</h3>
+        <p>Un texto inspirado en la resiliencia de las personas que atraviesan tratamientos prolongados.</p>
+      </article>
+    </div>
+  </div>
+</section>
