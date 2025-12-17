@@ -1,0 +1,30 @@
+---
+layout: layouts/pagina-contenido.njk
+title: Contacto
+subtitle: Agenda una consulta o comparte un proyecto creativo.
+---
+
+<p>Envíame un mensaje para coordinar una cita médica, solicitar información o compartir colaboraciones literarias.</p>
+
+<!-- Formulario de ejemplo sin integración a backend. -->
+<form class="contact-form" action="#" method="post">
+  <div class="form-grid">
+    <div>
+      <label for="nombre">Nombre</label>
+      <input id="nombre" name="nombre" type="text" placeholder="Tu nombre" required>
+    </div>
+    <div>
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" placeholder="tu@correo.com" required>
+    </div>
+  </div>
+  <div>
+    <label for="asunto">Asunto</label>
+    <input id="asunto" name="asunto" type="text" placeholder="Motivo del mensaje" required>
+  </div>
+  <div>
+    <label for="mensaje">Mensaje</label>
+    <textarea id="mensaje" name="mensaje" placeholder="Comparte detalles sobre tu consulta o proyecto" required></textarea>
+  </div>
+  <button class="button" type="submit">Enviar</button>
+</form>
