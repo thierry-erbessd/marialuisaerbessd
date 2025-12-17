@@ -11,8 +11,7 @@
 </head>
 <body>
   {% include "partials/header.njk" %}
-  {% include "partials/nav.njk" %}
-  <main class="container">
+  <main class="page-main">
     {% block main %}
       {{ content | safe }}
     {% endblock %}

@@ -1,12 +1,22 @@
 <footer class="site-footer">
   <div class="container footer-grid">
-    <div>
+    <div class="footer-brand">
       <p class="footer-title">Dra. María Luisa Erbessd</p>
-      <p>Medicina interna • Nefrología • Escritura</p>
-      <p>UNAM | Ciudad de México</p>
+      <p>Medicina interna, nefrología y escritura para cuidar la salud con humanidad.</p>
+      <p>UNAM · Ciudad de México</p>
+    </div>
+    <div class="footer-links">
+      <p class="footer-heading">Enlaces rápidos</p>
+      <ul>
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/medicina/">Medicina interna</a></li>
+        <li><a href="/nefrologia/">Nefrología</a></li>
+        <li><a href="/obras/">Obras</a></li>
+        <li><a href="/contacto/">Contacto</a></li>
+      </ul>
     </div>
     <div class="footer-social">
-      <p>Conecta</p>
+      <p class="footer-heading">Conecta</p>
       <ul>
         <li><a href="mailto:{{ site.social.email }}">Email</a></li>
         <li><a href="{{ site.social.instagram }}">Instagram</a></li>
@@ -14,7 +24,9 @@
       </ul>
     </div>
   </div>
-  <div class="container footer-bottom">
-    <p>© {{ "" | year }} Dra. María Luisa Erbessd. Todos los derechos reservados.</p>
+  <div class="footer-bottom">
+    <div class="container">
+      <p>© {{ "" | year }} Dra. María Luisa Erbessd. Todos los derechos reservados.</p>
+    </div>
   </div>
 </footer>

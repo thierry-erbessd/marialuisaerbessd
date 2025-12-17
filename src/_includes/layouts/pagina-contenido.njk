@@ -1,15 +1,22 @@
 {% extends "layouts/base.njk" %}
 
 {% block main %}
-<article class="page">
-  <header class="page-header">
-    <h1>{{ title }}</h1>
+<section class="page-hero">
+  <div class="container">
+    <p class="section-subtitle">Información</p>
+    <h1 class="page-title">{{ title }}</h1>
     {% if subtitle %}
       <p class="page-subtitle">{{ subtitle }}</p>
     {% endif %}
-  </header>
-  <section class="page-content">
-    {{ content | safe }}
-  </section>
-</article>
+  </div>
+</section>
+<section class="page-shell">
+  <div class="container">
+    <article class="page-card">
+      <div class="page-content">
+        {{ content | safe }}
+      </div>
+    </article>
+  </div>
+</section>
 {% endblock %}
