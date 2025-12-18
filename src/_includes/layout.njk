@@ -91,6 +91,32 @@
       transition: all 0.2s ease;
     }
 
+    .menu-toggle {
+      display: none;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.45rem 0.85rem;
+      background: #eef2f7;
+      color: var(--text);
+      border-radius: 12px;
+      border: 1px solid #d8deea;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s ease, border-color 0.2s ease;
+    }
+
+    .menu-toggle:hover,
+    .menu-toggle:focus-visible {
+      background: #e3e8f2;
+      border-color: #c9d4e8;
+      outline: none;
+    }
+
+    .menu-toggle svg {
+      width: 1.25rem;
+      height: 1.25rem;
+    }
+
     .primary-nav a:hover,
     .primary-nav a:focus-visible {
       background: #f0f4ff;
@@ -165,6 +191,39 @@
       white-space: nowrap;
       border: 0;
     }
+
+    @media (max-width: 720px) {
+      .site-bar {
+        flex-wrap: wrap;
+        align-items: center;
+      }
+
+      .primary-nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 0.35rem;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 0.75rem;
+        box-shadow: 0 10px 25px rgba(31, 45, 61, 0.08);
+      }
+
+      .primary-nav.is-open {
+        display: flex;
+      }
+
+      .primary-nav a {
+        width: 100%;
+        padding: 0.65rem 0.75rem;
+        border-radius: 10px;
+      }
+
+      .menu-toggle {
+        display: inline-flex;
+      }
+    }
   </style>
 </head>
 <body>
@@ -175,7 +234,15 @@
         <a class="brand" href="/">
           <span aria-label="Inicio">María Luisa Erbessd</span>
         </a>
-        <nav class="primary-nav" aria-label="Navegación principal">
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-principal">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+          </svg>
+          Menú
+        </button>
+        <nav id="nav-principal" class="primary-nav" aria-label="Navegación principal">
           <a href="/">Inicio</a>
           <a href="/biografia/">Biografía</a>
           <a href="/medicina/">Medicina</a>
@@ -200,5 +267,16 @@
       </div>
     </footer>
   </div>
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('#nav-principal');
+
+    if (toggle && nav) {
+      toggle.addEventListener('click', () => {
+        const isOpen = nav.classList.toggle('is-open');
+        toggle.setAttribute('aria-expanded', isOpen);
+      });
+    }
+  </script>
 </body>
 </html>
